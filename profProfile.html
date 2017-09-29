@@ -5,16 +5,27 @@
   <meta charset="utf-8">
   <style>
 	.fa-star, .fa-star-half-o {
-		color: orange;
-		border-color: yellow;
+		color: #f2b01e;
 	}
 	
-	.color-blue {
-		fill: blue;
+	.fa-thumbs-down:hover {
+		color: #EA0034;
 	}
 	
-	.color-red {
-		fill: red;
+	.fa-thumbs-up:hover {
+		color: #4286f4;
+	}
+	
+	.color-like {
+		color: #4286f4;
+	}
+	
+	.color-dislike {
+		color: #EA0034;
+	}
+	
+	img {
+		box-shadow: 1px 1px 5px black;
 	}
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,23 +80,48 @@
   <!--END OF NAVBAR-->
   <div class="container mainContainer">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4"> <!-- left column -->
 	    <div class="row">
-		  <div class="col-md-12">
-			<div class="card mb-3">
+		  <div class="col-md-12"> <!-- Details card -->
+			<div class="card mb-3"> 
 			  <div class="card-header text-center" style="background-image:url(1.jpg);">
 				<img class="rounded" src="rj.jpg" style="width:128px;border: 3px solid white;box-shadow: 2px 2px 15px black;">
 			  </div>
 			  <div class="card-body">
 				<h4 class="card-title">Renato Jose Maria Molano</h4>
                 <p class="card-text">College of Computer Studies</p>
-                <p class="card-text">Department of Information Technology</p>
-				<a href="#" class="btn btn-primary" style="width: 100%; height: 100%; font-size: 15px;">Add a review</a>
+                <p class="card-text">Department of Information Technology</p><br>
+				<a href="#" class="btn btn-primary bg-light" style="width: 100%; height: 100%; font-size: 15px;">Add a review</a>
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+				  Launch demo modal
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					  </div>
+					  <div class="modal-body">
+						...
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					  </div>
+					</div>
+				  </div>
+				</div>
 				<br>
 			  </div>
 			</div>
           </div>
-		  <div class="col-md-12">
+		  <div class="col-md-12"> <!-- Contact card-->
 			<div class="card mb-3">
 			  <div class="card-header bg-success text-white" style="height: 100%;">
 				<h4>Contact</h4>
@@ -97,32 +133,38 @@
 			  </div>
 			</div>
           </div>
-		  <div class="col-md-12">
+		  <div class="col-md-12"> <!-- Courses card -->
 			<div class="card mb-3">
 			  <div class="card-header bg-success text-white" style="height: 100%;">
 				<h4>Courses</h4>
 			  </div>
 			  <div class="card-body">
-			    <ol>
-				<li><p class="card-text">SYSTANA</p></li>
-				<li><p class="card-text">SYSTDES</p></li>
-				<li><p class="card-text">APPDEV</p></li>
-				<li><p class="card-text">SYSTIMP</p></li>
-				</ol>
+				<p>
+				<img src="training-blank-128.png" width="24" height="24">
+				<text class="card-text">SYSTANA</text>
+				</p>
+				<p>
+				<img src="training-blank-128.png" width="24" height="24">
+				<text class="card-text">SYSTDES</text>
+				</p>
+				<p>
+				<img src="training-blank-128.png" width="24" height="24">
+				<text class="card-text">SYSTIMP</text>
+				</p>
 			  </div>
 			</div>
           </div>
 		</div>
       </div>
       <!-- col -->
-      <div class="col-md-8">
+      <div class="col-md-8"> <!-- Information card -->
         <div class="card text-white mb-3" style="">
           <div class="card-header bg-success">
             <h4>Information</h4>
           </div>
           <div class="card-body text-black">
             <div>
-              <h4 class="card-title">About Renato </h4>
+              <h4 class="card-title">About Renato </h4> 
               <p class="card-text">Renato is a professor at De La Salle University that aims to enrich the students' knowledge about the current technological trends.</p>
             </div>
             <br>
@@ -151,91 +193,48 @@
 						<i class="fa fa-star"></i>
 				 </p><br>
 					<p style="margin: auto;">The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</p>
-					<div style="text-align: right"><text class="text-secondary">Was this helpful? </text><i class="fa fa-thumbs-up fa-2x"></i><text>  </text><div class="fa fa-thumbs-down fa-2x"></div></div>
-					
+					<div style="text-align: right"><text class="text-secondary">Was this helpful? </text><i class="fa fa-thumbs-up fa-2x"></i><text> </text><div class="fa fa-thumbs-down fa-2x"></div></div>
+				</div>
+			    <div class="col-md-2" style="max-width: 4rem;"><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p>
+				</div>
+				<div class="col-md-10"><text>John Andrew Santiago</text><text class="text-secondary">  a month ago</text>
+				  <p class="card-text">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+				 </p><br>
+					<p style="margin: auto;">The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</p>
+					<div style="text-align: right"><text class="text-secondary">Was this helpful? </text><i class="fa fa-thumbs-up fa-2x"></i><text> </text><div class="fa fa-thumbs-down fa-2x"></div></div>
+				</div>
+				<div class="col-md-2" style="max-width: 4rem;"><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p>
+				</div>
+				<div class="col-md-10"><text>John Andrew Santiago</text><text class="text-secondary"> a month ago</text>
+				  <p class="card-text">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+				 </p><br>
+					<p style="margin: auto;">The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</p>
+					<div style="text-align: right"><text class="text-secondary">Was this helpful? </text><i class="fa fa-thumbs-up fa-2x"></i><text> </text><div class="fa fa-thumbs-down fa-2x"></div></div>
+				</div>
+			    <div class="col-md-2" style="max-width: 4rem;"><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p>
+				</div>
+				<div class="col-md-10"><text>John Andrew Santiago</text><text class="text-secondary">  a month ago</text>
+				  <p class="card-text">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+				 </p><br>
+					<p style="margin: auto;">The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</p>
+					<div style="text-align: right"><text class="text-secondary">Was this helpful? </text><i class="fa fa-thumbs-up fa-2x"></i><text> </text><div class="fa fa-thumbs-down fa-2x"></div></div>
 				</div>
 			  </div>
-			  <br>
-			  <table>
-			    <tr>
-				  <td><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p></td>
-				  <td><text>John Andrew Santiago</text><p class="text-secondary">a month ago</p></td>
-			    </tr>
-				<tr>
-				  <td></td>
-				  <td>
-				    <div>
-					  <p class="card-text">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<text> - The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</text>
-					  </p>
-					</div>
-				  </td>
-			  </table><br>
-			  <table>
-			    <tr>
-				  <td><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p></td>
-				  <td><text>John Andrew Santiago</text><p class="text-secondary">a month ago</p></td>
-			    </tr>
-				<tr>
-				  <td></td>
-				  <td>
-				    <div>
-					  <p class="card-text">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-half-o"></i>
-						<text> - The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</text>
-					  </p>
-					</div>
-				  </td>
-			  </table><br>
-			  <table>
-			    <tr>
-				  <td><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;box-shadow: 1px 1px 3px black;"></p></td>
-				  <td><text>John Andrew Santiago</text><p class="text-secondary">a month ago</p></td>
-			    </tr>
-				<tr>
-				  <td></td>
-				  <td>
-				    <div>
-					  <p class="card-text">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-o"></i>
-						<text> - The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</text>
-					  </p>
-					</div>
-				  </td>
-			  </table><br>
-			  <table>
-			    <tr>
-				  <td><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p></td>
-				  <td><text>John Andrew Santiago</text><p class="text-secondary">a month ago</p></td>
-			    </tr>
-				<tr>
-				  <td></td>
-				  <td>
-				    <div>
-					  <p class="card-text">
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star"></i>
-						<i class="fa fa-star-o"></i>
-						<text> - The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</text>
-					  </p>
-					</div>
-				  </td>
-			  </table><br>
 			</div>
           </div>
         </div>
@@ -299,10 +298,12 @@
   
   <script>
 	$('.fa-thumbs-up').click(function() {
-		$(this).toggleClass("color-blue");
+		$(this).toggleClass("color-like");
+		$(".fa-thumbs-down").removeClass("color-dislike");
 	});
-	$('.fa,.fa-thumbs-down').click(function() {
-		$(this).toggleClass("color-red");
+	$('.fa-thumbs-down').click(function() {
+		$(this).toggleClass("color-dislike");
+		$(".fa-thumbs-up").removeClass("color-like");
 	});
   </script>
   

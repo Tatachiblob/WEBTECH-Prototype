@@ -12,22 +12,20 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <style>
-  .rotate {
-		-webkit-animation: rotation 3s;
-}
+	.list-group-item.list-group-item-action.active {
+		background-color: #5cb85c !important;
+	}
 
-@-webkit-keyframes rotation {
-		from {
-				-webkit-transform: rotate(0deg);
-		}
-		to {
-				-webkit-transform: rotate(360deg);
-		}
-}
-	
-</style>
+	.page-link {
+		color: black;
+	}
+
+	.page-item.active > .page-link {
+		background-color: #5cb85c;
+	}
+  </style>
 <body>
-  <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top" style="width: 100%; position: fixed;">
+  <nav class="navbar navbar-expand-md bg-success navbar-dark" style="width: 100%; position: fixed;">
     <div class="container">
       <a class="navbar-brand" href="#">Profsmato</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
@@ -76,190 +74,25 @@
 	  <div class="col-md-12 animated slideInLeft">
 	    <h4 id="icon"><img src="forum-icon-7.png" style="width: 30px; height: 30px;"></img> FORUMS</h4>
 	  </div>
-	  <div class="col-md-8 animated slideInLeft">
-		  <br>
-		    <div class="card">
-			  <div class="card-header bg-success text-white" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-				  General discussions<i class="fa fa-chevron-down pull-right" id="loading"></i>
-			  </div>
-              <div class="collapse show" id="collapseExample">
-                <div class="card-block">
-				<div class="row">
-				  <div class="col-md-1">
-				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
-				  </div>
-				  <div class="col-md-6">
-				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
-				  </div>
-				  <div class="col-md-2 status">
-				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
-				  </div>
-				  <div class="col-md-3">
-				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
-					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
-					<p>on September 28, 2017 - 3:30pm</p>
-				  </div>
-				</div><br>
-				<div class="row">
-				  <div class="col-md-1">
-				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
-				  </div>
-				  <div class="col-md-6">
-				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
-				  </div>
-				  <div class="col-md-2 status">
-				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
-				  </div>
-				  <div class="col-md-3">
-				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
-					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
-					<p>on September 28, 2017 - 3:30pm</p>
-				  </div>
-				</div>
-				<a href="#" class="btn btn-primary" style="float: right;">View all <i class="fa fa-chevron-right"></i></a>
-			    </div>
-			  </div>
-			</div>
-			<div class="card">
-			  <div class="card-header bg-success text-white" data-toggle="collapse" href="#collapseExample1" aria-expanded="true">
-				  Prof discussions<i class="fa fa-chevron-down pull-right"></i>
-			  </div>
-              <div class="collapse show" id="collapseExample1">
-                <div class="card-block">
-				<div class="row">
-				  <div class="col-md-1">
-				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
-				  </div>
-				  <div class="col-md-6">
-				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
-				  </div>
-				  <div class="col-md-2 status">
-				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
-				  </div>
-				  <div class="col-md-3">
-				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
-					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
-					<p>on September 28, 2017 - 3:30pm</p>
-				  </div>
-				</div><br>
-				<div class="row">
-				  <div class="col-md-1">
-				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
-				  </div>
-				  <div class="col-md-6">
-				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
-				  </div>
-				  <div class="col-md-2 status">
-				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
-				  </div>
-				  <div class="col-md-3">
-				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
-					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
-					<p>on September 28, 2017 - 3:30pm</p>
-				  </div>
-				</div>
-				<a href="#" class="btn btn-primary" style="float: right;">View all <i class="fa fa-chevron-right"></i></a>
-			    </div>
-			  </div>
-			</div>
-			<div class="card">
-			  <div class="card-header bg-success text-white" data-toggle="collapse" href="#collapseExample2" aria-expanded="true">
-				  Site discussions<i class="fa fa-chevron-down pull-right"></i>
-			  </div>
-              <div class="collapse show" id="collapseExample2">
-                <div class="card-block">
-				<div class="row">
-				  <div class="col-md-1">
-				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
-				  </div>
-				  <div class="col-md-6">
-				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
-				  </div>
-				  <div class="col-md-2 status">
-				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
-				  </div>
-				  <div class="col-md-3">
-				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
-					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
-					<p>on September 28, 2017 - 3:30pm</p>
-				  </div>
-				</div><br>
-				<div class="row">
-				  <div class="col-md-1">
-				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
-				  </div>
-				  <div class="col-md-6">
-				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
-				  </div>
-				  <div class="col-md-2 status">
-				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
-				  </div>
-				  <div class="col-md-3">
-				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
-					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
-					<p>on September 28, 2017 - 3:30pm</p>
-				  </div>
-				</div>
-				<a href="#" class="btn btn-primary" style="float: right;">View all <i class="fa fa-chevron-right"></i></a>
-			    </div>
-			  </div>
-			</div>
-			<div class="card">
-			  <div class="card-header bg-success text-white" data-toggle="collapse" href="#collapseExample3" aria-expanded="true">
-				  College discussions<i class="fa fa-chevron-down pull-right"></i>
-			  </div>
-              <div class="collapse show" id="collapseExample3">
-                <div class="card-block">
-				<div class="row">
-				  <div class="col-md-1">
-				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
-				  </div>
-				  <div class="col-md-6">
-				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
-				  </div>
-				  <div class="col-md-2 status">
-				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
-				  </div>
-				  <div class="col-md-3">
-				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
-					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
-					<p>on September 28, 2017 - 3:30pm</p>
-				  </div>
-				</div><br>
-				<div class="row">
-				  <div class="col-md-1">
-				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
-				  </div>
-				  <div class="col-md-6">
-				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
-				  </div>
-				  <div class="col-md-2 status">
-				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
-				  </div>
-				  <div class="col-md-3">
-				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
-					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
-					<p>on September 28, 2017 - 3:30pm</p>
-				  </div>
-				</div>
-				<a href="#" class="btn btn-primary" style="float: right;">View all <i class="fa fa-chevron-right"></i></a>
-			    </div>
-			  </div>
-			</div>
-	  </div>
 	  <div class="col-md-4 animated slideInRight">
 	  <br>
 	    <div class="row">
-		  <div class="col-md-12">
+		  <div class="col-md-12"> <!-- Add forums -->
 			<div class="card rounded" id="cardshake">
-			  <div class="card-block text-center">
-				<a href="#" class="btn btn-primary" id="create" style="width: 100%; height: 100%; font-size: 20px;">CREATE FORUM</a>
-				<p class="card-text">Create and add a new forum page!</p>
+			  <div class="card-header" style="padding: 0.4rem;">
+			    <a href="#" class="btn btn-primary bg-light text-center" id="create" style="width: 100%; height: 100%; font-size: 20px; margin: auto">CREATE FORUM</a>
+			  </div>
+			  <div class="list-group" id="list-tab" role="tablist">
+			  	<a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">All</a>
+			    <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">General</a>
+			    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profs</a>
+			    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Site</a>
+			    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">College</a>
 			  </div>
 			</div>
 			<br>
 		  </div>
-		  <div class="col-md-12">
+		  <div class="col-md-12"> <!-- Most discussed threads -->
 			<div class="card">
 			  <div class="card-header bg-success text-white">
 				Most Discussed Threads
@@ -282,9 +115,223 @@
 				</p>
 			  </div>
 			</div>
+			<br>
+		  </div>
+		  <div class="col-md-12"> <!-- Most viewed threads -->
+			<div class="card">
+			  <div class="card-header bg-success text-white">
+				Most Viewed Threads
+			  </div>
+			  <div class="card-block">
+				<p class="card-text"><i class="fa fa-comments fa-lg" aria-hidden="true">&nbsp;</i>
+				  <a href="#" class="proflabel text-black">Eduard Carlos... bading o hindi??? </a>
+				</p>
+				<p class="card-text"><i class="fa fa-comments fa-lg" aria-hidden="true">&nbsp;</i>
+				  <a href="#" class="proflabel text-black">Yuta Inoue, the CCS yoyo guy </a>
+				</p>
+				<p class="card-text"><i class="fa fa-comments fa-lg" aria-hidden="true">&nbsp;</i>
+				  <a href="#" class="proflabel text-black">This Bernie Sanders fanboy really sucks (Christian Alderite) </a>
+				</p>
+				<p class="card-text"><i class="fa fa-comments fa-lg" aria-hidden="true">&nbsp;</i>
+				  <a href="#" class="proflabel text-black">Any PUBG players here? </a>
+				</p>
+				<p class="card-text"><i class="fa fa-comments fa-lg" aria-hidden="true">&nbsp;</i>
+				  <a href="#" class="proflabel text-black">Jake Zyrus... may t i t i o wala? </a>
+				</p>
+			  </div>
+			</div>
 		  </div>
 	    </div>
 	  </div>
+	  <div class="col-md-8 animated slideInLeft">
+		  <br>
+		    <div class="card"> <!-- General discussions -->
+			  <div class="card-header bg-success text-white">
+				  All discussions
+			  </div>
+                <div class="card-block">
+				<div class="row pl-3">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div class="row pl-3 pt-2 mb-2 bg-light text-gray-dark">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div class="row pl-3">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div class="row pl-3 pt-2 mb-2 bg-light text-gray-dark">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div class="row pl-3">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div class="row pl-3 pt-2 mb-2 bg-light text-gray-dark">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div class="row pl-3">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div class="row pl-3 pt-2 mb-2 bg-light text-gray-dark">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div class="row pl-3">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div class="row pl-3 pt-2 mb-2 bg-light text-gray-dark">
+				  <div class="col-md-1">
+				    <i class="fa fa-comments fa-3x" aria-hidden="true">&nbsp;</i>
+				  </div>
+				  <div class="col-md-6">
+				    <p class="card-text"><a href="#" class="text-black">Eduard Carlos... bading o hindi??? </a></p><p class="text-secondary">are you an alien? New to Earth? Ask us any questions!</p>
+				  </div>
+				  <div class="col-md-2 status">
+				    <p style="margin-bottom: 5px;">Threads: 8</p><p>Posts: 0</p>
+				  </div>
+				  <div class="col-md-3">
+				    <p style=" margin: 0px;">Latest Thread: <a href="#">Jake Zyrus pa...</a></p>
+					<p style=" margin: 0px;">by <a href="#">Itbankrock</a></p>
+					<p>on September 28, 2017 - 3:30pm</p>
+				  </div>
+				</div>
+				<div>
+				  <ul class="pagination justify-content-center">
+					<li class="page-item disabled">
+					  <span class="page-link">First</span>
+					</li>
+					<li class="page-item disabled">
+					  <span class="page-link">Previous</span>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">1</a></li>
+					<li class="page-item active"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">3</a></li>
+					<li class="page-item">
+					  <a class="page-link" href="#">Next</a>
+					</li>
+					<li class="page-item">
+					  <a class="page-link" href="#">Last</a>
+					</li>
+				  </ul>
+				</div>
+			    </div>
+			</div>
+		</div>
 	</div>
 	</div>
   <!-- container -->
@@ -344,9 +391,6 @@
   
   <script>
     $(document).ready(function () {
-		$("#loading").click(function() {
-			$(this).toggleClass("animated rotateInDownLeft");
-		})
 		$("#icon").mouseenter(function() {
 			$("#icon").toggleClass("animated shake");
 		})
