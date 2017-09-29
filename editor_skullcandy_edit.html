@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css">
+  
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.min.js"></script>
+    
+  
+
+  <style type="text/css">
+    /***
+	Summernote with Bootstrap 4 and Material Design Bootstrap (MDB)
+	by djibe
+	JSFiddle : https://jsfiddle.net/djibe89/rh5rxh9c/
+***/
+
+
+/*Set a "summernote" class to the div containing your summernote div to make my style work
+<div class="form-group summernote"><!--Summernote class to style editor-->
+	<textarea id="courrier-examen"></textarea>
+</div>
+*/
+
+
+/* To have css in root/css folder and font in root/font folder*/
+
+
+/*
+@font-face {
+    font-family: "summernote";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/summernote.eot?ad8d7e2d177d2473aecd9b35d16211fb");
+    src: url("../font/summernote.eot?#iefix") format("embedded-opentype"), url("../font/summernote.woff?ad8d7e2d177d2473aecd9b35d16211fb") format("woff"), url("../font/summernote.ttf?ad8d7e2d177d2473aecd9b35d16211fb") format("truetype")
+}*/
+
+
+/*textarea look on focus, prefer js box-shadow on .summernote*/
+
+
+/*.note-editor.note-frame .note-editing-area .note-editable:focus {
+	background: #FAFBFD;
+}*/
+
+
+/*placeholder style*/
+
+.note-placeholder {
+    position: absolute;
+    top: 90px;
+    left: 95px;
+    font-size: 34px;
+    color: #e4e5e7;
+    display: none;
+    pointer-events: none;
+}
+
+
+/*Toolbar panel*/
+
+.note-editor .note-toolbar {
+    background: #F5F5F5;
+    border-bottom: 1px solid #c2cad8;
+}
+
+.summernote .panel-primary>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+
+/*Buttons from toolbar*/
+
+.summernote .btn-default {
+    background: white !important;
+}
+
+.summernote .btn-default:hover {
+    background: #4285F4 !important;
+}
+
+.summernote .btn-default.active {
+    background: #0B51C5 !important;
+}
+
+.summernote .btn {
+    color: black !important;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    white-space: nowrap !important;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    user-select: none;
+    box-shadow: none !important;
+}
+
+.summernote .btn:hover {
+    cursor: pointer;
+}
+
+  </style>
+
+  <title>Bootstrap 4 with Material Design Bootstrap and Summernote editor</title>
+
+  
+    
+
+
+
+
+<script type='text/javascript'>//<![CDATA[
+var VanillaRunOnDomReady = function() {
+//Bootstrap 4 + MDB + Summernote wysiwyg text editor
+//doc : https://github.com/summernote/summernote
+//Bootstrap 4 tweaks : https://github.com/summernote/summernote/issues/1324
+//+ print + FontAwesome
+
+$('#courrier-examen').summernote({
+    height: 400,
+    placeholder: 'Write here ...',
+    focus: false,
+    airMode: false,
+    fontNames: ['Roboto', 'Calibri', 'Times New Roman', 'Arial'],
+    fontNamesIgnoreCheck: ['Roboto', 'Calibri'],
+    dialogsInBody: true,
+    dialogsFade: true,
+    disableDragAndDrop: false,
+    toolbar: [
+        // [groupName, [list of button]]
+        ['para', ['style', 'ul', 'ol', 'paragraph']],
+        ['fontsize', ['fontsize']],
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['font', ['strikethrough', 'superscript', 'subscript']],
+        ['height', ['height']],
+        ['misc', ['undo', 'redo', 'print', 'help', 'fullscreen']]
+    ],
+    popover: {
+        air: [
+            ['color', ['color']],
+            ['font', ['bold', 'underline', 'clear']]
+        ]
+    },
+    print: {
+        //'stylesheetUrl': 'url_of_stylesheet_for_printing'
+    }
+});
+$('.note-popover').css({
+    'display': 'none'
+});
+
+// summernote.focus
+$('#courrier-examen').on('summernote.focus', function() {
+    console.log('Editable area is focused');
+    $('.summernote').css('box-shadow', '0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)');
+});
+
+
+// summernote.blur backup textarea
+$('#courrier-examen').on('summernote.blur', function() {
+    console.log('Editable area loses focus');
+    $('.summernote').css('box-shadow', 'none');
+    var $courrierMedical = $('#courrier-examen').summernote('code');
+});
+
+}
+
+var alreadyrunflag = 0;
+
+if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", function(){
+        alreadyrunflag=1; 
+        VanillaRunOnDomReady();
+    }, false);
+else if (document.all && !window.opera) {
+    document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>');
+    var contentloadtag = document.getElementById("contentloadtag")
+    contentloadtag.onreadystatechange=function(){
+        if (this.readyState=="complete"){
+            alreadyrunflag=1;
+            VanillaRunOnDomReady();
+        }
+    }
+}
+
+window.onload = function(){
+  setTimeout("if (!alreadyrunflag){VanillaRunOnDomReady}", 0);
+}//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <h1>Bootstrap 4 + MDB + Summernote wysiwyg <span class="h4">by djibe</span></h1>
+                <p class="lead">Give Summernote the Material design feeling.</p>
+                <div class="row mt-1">
+                    <div class="col">
+                        <div class="form-group summernote">
+                            <!--Summernote class to style editor-->
+                            <textarea id="courrier-examen"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "fwuao4qc"
+    }], "*")
+  }
+</script>
+
+</body>
+
+</html>
+

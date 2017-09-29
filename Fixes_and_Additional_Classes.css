@@ -1,0 +1,38 @@
+/*! WEBTECH S16 Phantom Five Project
+ * Some fixes and additional classes for the Bootstrap Material Design Theme by FezVrasta
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Copyright 2017 Phantom Five Dev Team
+ /*# sourceMappingURL=bootstrap.min.css.map */
+ 
+/*! Fixes the z-index of the FIXED-TOP class to be used on the navbar to be further ahead of the components below it.  */
+.fixed-top {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+
+/*! -------------------ADDITIONAL CLASSES-------------------  */
+/*! text-black class, the opposite of the built-in text-white class  */
+.text-black {
+	color: black;
+}
+
+.mainContainer {
+  padding-top: 5rem;
+}
+
+.card-text {
+   margin: auto;
+}
+
+.col-md-2, .col-md-3, .text-secondary {
+	font-size: 10px; 
+}
+
+.forum-icon {
+	max-width: 3rem;
+}
