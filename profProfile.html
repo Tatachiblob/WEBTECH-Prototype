@@ -4,7 +4,11 @@
 <head>
   <meta charset="utf-8">
   <style>
-	.fa-star, .fa-star-half-o {
+	.fa-star, .fa-star-half-o, .fa-star-o {
+		color: #f2b01e;
+	}
+	
+	.fa-star-o:hover {
 		color: #f2b01e;
 	}
 	
@@ -14,6 +18,7 @@
 	
 	.fa-thumbs-up:hover {
 		color: #4286f4;
+		direction: rtl;
 	}
 	
 	.color-like {
@@ -26,6 +31,15 @@
 	
 	img {
 		box-shadow: 1px 1px 5px black;
+	}
+	textarea::-webkit-input-placeholder {
+		color: rgba(0,0,0,0.2) !important;
+	}
+
+	textarea{  
+	  
+	  box-sizing: border-box;
+	  resize: none;
 	}
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,31 +103,55 @@
 			  </div>
 			  <div class="card-body">
 				<h4 class="card-title">Renato Jose Maria Molano</h4>
-                <p class="card-text">College of Computer Studies</p>
-                <p class="card-text">Department of Information Technology</p><br>
-				<a href="#" class="btn btn-primary bg-light" style="width: 100%; height: 100%; font-size: 15px;">Add a review</a>
-				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-				  Launch demo modal
+                <p class="card-text"><i class="fa fa-graduation-cap fa-fw"></i> College of Computer Studies</p>
+                <p class="card-text"><i class="fa fa-users fa-fw"></i> Department of Information Technology</p><br>
+				<button type="button" class="btn btn-primary" style="width: 100%; height: 100%; font-size: 15px; margin: auto;" data-toggle="modal" data-target="#exampleModal">
+					Add a review
 				</button>
-
 				<!-- Modal -->
-				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				  <div class="modal-dialog" role="document">
+				<div class="modal fade" id="exampleModal">
+				  <div class="modal-dialog">
 					<div class="modal-content">
-					  <div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						  <span aria-hidden="true">&times;</span>
-						</button>
+					  <div class="card-header bg-success text-white">
+					    <div class="row">
+						  <div class="col-md-2" style="max-width: 4rem;">
+						    <i class="fa fa-pencil-square-o fa-3x"></i>
+						  </div>
+						  <div class="col-md-10">
+							<h5><p style="margin: auto;">Rate and review</p></h5>
+							<p style="margin: auto; color: rgba(255,255,255,0.7); white-space:nowrap; overflow: hidden; text-overflow: ellipsis;">Renato Jose Maria Manalo, College of Computer Studies, Department of Information Technology</p>
+						  </div>
+						</div>
 					  </div>
-					  <div class="modal-body">
-						...
+					  <div class="card-body">
+					  <div class="row">
+						<div class="col-md-2" style="max-width: 4rem;"><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:3rem;"></p>
+						</div>
+						<div class="col-md-10"><text>John Andrew Santiago</text>
+						  <p style="color: rgba(0,0,0,0.5);">Your review will be posted publicly on the web.</p>
+						  <p class="card-text">
+								<i class="fa fa-star-o fa-2x"></i>
+								<i class="fa fa-star-o fa-2x"></i>
+								<i class="fa fa-star-o fa-2x"></i>
+								<i class="fa fa-star-o fa-2x"></i>
+								<i class="fa fa-star-o fa-2x"></i>
+						 </p>
+						  <div class="form-group">
+							<label for="exampleFormControlTextarea1">Review:</label>
+							<textarea class="form-control pt=3" id="exampleFormControlTextarea1" data-autoresize rows="1" placeholder="Write your review here" style="line-height: 140%;"></textarea>
+						  </div>
+						</div>
 					  </div>
-					  <div class="modal-footer">
+					  </div>
+					  <div class="card-footer text-right">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="button" class="btn btn-primary">Post</button>
 					  </div>
+					  <!--<div class="card">
+					    <div class="card-header bg-success text-white">
+						  Rate
+						</div>
+					  </div>-->
 					</div>
 				  </div>
 				</div>
@@ -304,6 +342,15 @@
 	$('.fa-thumbs-down').click(function() {
 		$(this).toggleClass("color-dislike");
 		$(".fa-thumbs-up").removeClass("color-like");
+	});
+	
+	jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+		var offset = this.offsetHeight - this.clientHeight;
+	 
+		var resizeTextarea = function(el) {
+			jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+		};
+		jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
 	});
   </script>
   
