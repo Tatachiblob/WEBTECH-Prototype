@@ -26,7 +26,7 @@
 <body>
   <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Profsmato</a>
+      <a class="navbar-brand" href="index.html">Profsmato</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -46,7 +46,7 @@
             </li>
           </ul>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">FORUMS</a>
+            <a class="nav-link text-white" href="forums.html">Forums</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
@@ -57,7 +57,7 @@
                 <img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:64px;">
                 <br> <text>Andrew</text>
                 <hr> </div>
-              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="studentProfile.html">Profile</a>
               <a class="dropdown-item" href="#">Logout</a>
             </div>
           </li>
@@ -71,7 +71,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<nav class="breadcrumb">
-			  <a class="breadcrumb-item" href="#">Forums</a>
+			  <a class="breadcrumb-item" href="forums.html">Forums</a>
 			  <a class="breadcrumb-item" href="#">General Discussions</a>
 			  <span class="breadcrumb-item active">Eduard Carlos... bading o hindi???</span>
 			</nav>
@@ -175,7 +175,64 @@
 	</div> <!--DIV CLASS ROW END-->
 	
 	<div class="row">
-	
+		<div class="col-md-12">
+			<div class="card text-white mb-3">
+			  <div class="card-header text-white bg-success">Add your reply</div>
+			  <div class="card-body">
+				<div class="row">
+				<div class="col-md-12">
+					<button type="button" class="btn btn-raised btn-secondary" id="btnbold"><i class="fa fa-bold" aria-hidden="true"></i></button>
+					<button type="button" class="btn btn-raised btn-secondary" id="btnitalic"><i class="fa fa-italic" aria-hidden="true"></i></button>
+					<button type="button" class="btn btn-raised btn-secondary" id="btnuline"><i class="fa fa-underline" aria-hidden="true"></i></button>
+					<button type="button" class="btn btn-raised btn-secondary" id="btnlink"><i class="fa fa-link" aria-hidden="true"></i></button>
+					
+					<div class="btn-group" style="display:inline;bottom:4px;">
+					  <button type="button" class="btn btn-secondary btn-raised dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Size
+					  </button>
+					  <div class="dropdown-menu">
+						<button class="dropdown-item" type="button" id="btnvsmall">Very Small</button>
+						<button class="dropdown-item" type="button" id="btnsmall">Small</button>
+						<button class="dropdown-item" type="button" id="btnnormal">Normal</button>
+						<button class="dropdown-item" type="button" id="btnlarge">Large</button>
+						<button class="dropdown-item" type="button" id="btnvlarge">Very Large</button>
+					  </div>
+					</div>
+					
+					<div class="btn-group" style="display:inline;bottom:4px;">
+					  <button type="button" class="btn btn-secondary btn-raised dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Color
+					  </button>
+					  <div class="dropdown-menu">
+						<button class="dropdown-item" type="button" id="btnblack">Black</button>
+						<button class="dropdown-item" type="button" id="btnred">Red</button>
+						<button class="dropdown-item" type="button" id="btnblue">Blue</button>
+						<button class="dropdown-item" type="button" id="btngreen">Green</button>
+					  </div>
+					</div>
+					
+				</div>
+					
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div id="thereforyou" class="text-black" style="border-style: groove;width:100%;" contenteditable>
+						Select some text and click the button to make it bold...
+						<br>Or write your own text
+						</div>
+						<br>
+						<button type="button" class="btn btn-raised btn-primary" id="btnsubmitreply" style="float:right;">Submit</button>
+					</div>
+				</div>
+				
+				
+				
+			  </div>
+			</div>
+				
+
+		</div>
 	
 	</div>
 
@@ -238,6 +295,60 @@
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+  
+  <script>
+  $(document).ready(function() {
+  $('#btnbold').click(function() {
+    document.execCommand('bold');
+  });
+  
+  $('#btnitalic').click(function() {
+    document.execCommand('italic');
+  });
+  
+  $('#btnuline').click(function() {
+    document.execCommand('underline');
+  });
+  
+  $('#btnlink').click(function() {
+	var link = prompt("Place the url/link here (it must start with http:// or https://)", "");
+    document.execCommand("CreateLink", true, link);
+  });
+  
+  $('#btnvsmall').click(function() {
+	document.execCommand('fontSize',false,'1');
+  });
+  
+  $('#btnsmall').click(function() {
+	document.execCommand('fontSize',false,'2');
+  });
+  $('#btnnormal').click(function() {
+	document.execCommand('fontSize',false,'3');
+  });
+  $('#btnlarge').click(function() {
+	document.execCommand('fontSize',false,'5');
+  });
+  $('#btnvlarge').click(function() {
+	document.execCommand('fontSize',false,'7');
+  });
+  
+  $('#btnred').click(function() {
+	document.execCommand('foreColor',false,'red');
+  });
+  $('#btnblue').click(function() {
+	document.execCommand('foreColor',false,'blue');
+  });
+  $('#btngreen').click(function() {
+	document.execCommand('foreColor',false,'green');
+  });
+  
+  $("#btnsubmitreply").click(function() {
+    alert($("#thereforyou").html());
+  });
+  
+  
+});
+  </script>
 </body>
 
 </html>
