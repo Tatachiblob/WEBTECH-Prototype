@@ -36,3 +36,15 @@
 .forum-icon {
 	max-width: 3rem;
 }
+.review-comment{
+
+}
+
+.review-subcomment{
+	margin-left:1rem;
+	border-left-style: groove;
+}
+
+.review-subsubcomment{
+	margin-left:1rem;
+}
