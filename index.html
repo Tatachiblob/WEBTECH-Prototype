@@ -13,6 +13,11 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
+	.mainContainer {
+      padding-top: 3rem;
+    }
+  
+  
     .carousel {
       background-color: black;
     }
@@ -122,7 +127,32 @@
       </div>
     </div>
   </nav>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <br>
+  <!-- Main elements -->
+  <div class="container mainContainer">
+  
+  <div class="row">
+  
+	<div class="col-md-8 ml-auto mr-auto">
+	
+		<form>
+			<div class="input-group">
+			  <input type="text" class="form-control" placeholder="Search a professor">
+			  <span class="input-group-btn">
+				<button class="btn btn-secondary" type="button">Go!</button>
+			  </span>
+			</div>
+		</form>
+	
+	</div>
+  
+  </div>
+  
+	<div class="row">
+		<div class="col-md-12">
+			
+			  <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -166,10 +196,14 @@
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
-  </div>
-  <br>
-  <!-- Elements below Carousel -->
-  <div class="container">
+  </div> <!-- end carousel -->
+			
+		</div>
+	
+	</div>
+  
+  
+  
     <div class="row">
       <div class="col-md-6 grid-divider">
         <div class="container">
@@ -321,7 +355,7 @@
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/split.min.js">
   </script>
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/popper.min.js"></script>
-  <script src="https://fezvrasta.github.io/bootstrap-material-design/dist/js/bootstrap-material-design.js"></script>
+  <script src="bootstrap-material-design.js"></script>
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/anchor.min.js"></script>
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>

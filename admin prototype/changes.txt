@@ -1,0 +1,15 @@
+Navbar changes:
+	- Navbar includes
+		- Management (Manage Homepage, Manage Users, Manage Profs, Manage admin (???))
+		- User Complaints (Reported Comments, Reported Users)
+		- User Reqs (Prof requests, registration requests)
+		
+Dashboard changes:
+- Colored cards (# of Users, Professors, user complaints, requests)
+- Table for best profs per college
+
+Andrew
+- Dashboard, requests + complaints
+
+Nigel
+- Profs + users management, carousel mngmnt
