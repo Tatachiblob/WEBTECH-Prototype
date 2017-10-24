@@ -152,13 +152,13 @@
   <!-- Main elements -->
 	<div class="container mainContainer">
 	<h1 class="display-4 d-none d-sm-block">
-		Reported Reviews
+		Professor Requests
 	</h1>
 	<div class="alert alert-info alert-dismissible fade show material-shadow" role="alert">
 	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 		<span aria-hidden="true">&times;</span>
 	  </button>
-	  <strong>Welcome to the Reported Reviews module, admin!</strong> You should check in on some of those fields below.
+	  <strong>Welcome to the Professor Requests module, admin!</strong> You should check in on some of those fields below.
 	</div>
 	
 		<div class="row mb-3">
@@ -179,37 +179,6 @@
 		<div class="row mb-3">
 		<div class="col-md-7">
 			<div id="filters" style="display:none;">
-				<div class="btn-group">
-				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					BY REPORT DATE
-				  </button>
-				  <div class="dropdown-menu">
-					<a class="dropdown-item" href="#"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Latest first</a>
-					<a class="dropdown-item" href="#">Oldest first</a>
-				  </div>
-				</div>
-				
-				<div class="btn-group">
-				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					BY STATUS
-				  </button>
-				  <div class="dropdown-menu">
-					<a class="dropdown-item" href="#">Unread</a>
-					<a class="dropdown-item" href="#">Dismissed</a>
-					<a class="dropdown-item" href="#">Removed</a>
-				  </div>
-				</div>
-				
-				<div class="btn-group">
-				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					BY REASON
-				  </button>
-				  <div class="dropdown-menu">
-					<a class="dropdown-item" href="#">Inappropriate Content</a>
-					<a class="dropdown-item" href="#">Offensive Content</a>
-					<a class="dropdown-item" href="#">Irrelevant Content</a>
-				  </div>
-				</div>
 				
 				<div class="btn-group">
 				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -239,69 +208,40 @@
 			<div class="col-md-12">
 				<div class="table-responsive">
 					<table class="table table-hover table-bordered nowrap material-shadow" cellspacing="0" width="100%" id="yutangina">
-						
+					
 						<thead class="thead-inverse">
 							<tr>
-								<th>Review Title</th>
-								<th>Posted by</th>
+								<th>Professor name</th>
 								<th>College</th>
-								<th>Reported by</th>
-								<th>Reported Date</th>
-								<th>Reason</th>
-								<th>Status</th>
+								<th>Approval</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>"Best Prof Ever"</td>
-								<td>santiago_ja</td>
+								<td>Calantuan</td>
 								<td>CCS</td>
-								<td>earlMedina_</td>
-								<td>9/27/2017</td>
-								<td>Inappropriate</td>
-								<td>Unread</td>
+								<td><input type="checkbox" style="width: 1.5rem; height: 1.5rem;"></td>
 							</tr>
-							
 							<tr>
-								<td>"Baklang Eduard"</td>
-								<td>ochinchinMaster_</td>
+								<td>Santiago</td>
 								<td>CCS</td>
-								<td>earlMedina_</td>
-								<td>10/21/2017</td>
-								<td>Irrelevant</td>
-								<td>Dismissed</td>
+								<td><input type="checkbox" style="width: 1.5rem; height: 1.5rem;"></td>
 							</tr>
-							
 							<tr>
-								<td>"WELCOME TO UGANDA"</td>
-								<td>africanMan_</td>
-								<td>GCOE</td>
-								<td>ochinchinMaster_</td>
-								<td>10/7/2017</td>
-								<td>Irrelevant</td>
-								<td>Removed</td>
+								<td>Inoue</td>
+								<td>CCS</td>
+								<td><input type="checkbox" style="width: 1.5rem; height: 1.5rem;"></td>
 							</tr>
-							
 							<tr>
-								<td>"RESPECT WAHMEN"</td>
-								<td>PewDiePie</td>
-								<td>CLA</td>
-								<td>santiago_ja</td>
-								<td>10/5/2017</td>
-								<td>Irrelevant</td>
-								<td>Removed</td>
+								<td>Alderite</td>
+								<td>CCS</td>
+								<td><input type="checkbox" style="width: 1.5rem; height: 1.5rem;"></td>
 							</tr>
-							
 							<tr>
-								<td>"IS MATH RELATED TO SCIENCE??!?"</td>
-								<td>kakayperry_</td>
-								<td>CLA</td>
-								<td>PewDiePie</td>
-								<td>10/2/2017</td>
-								<td>Irrelevant</td>
-								<td>Unread</td>
+								<td>General</td>
+								<td>CCS</td>
+								<td><input type="checkbox" style="width: 1.5rem; height: 1.5rem;"></td>
 							</tr>
-
 							
 						</tbody>
 					</table>
