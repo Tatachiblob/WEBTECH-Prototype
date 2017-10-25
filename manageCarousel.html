@@ -52,6 +52,21 @@
 		overflow: hidden;
 		background-size: 100% 100%;
 	}
+	
+	div.scrollmenu {
+		background-color: #fff;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	
+	div.scrollmenu img:hover {
+	    border: 2px solid green;
+	}
+
+	textarea{  
+	  box-sizing: border-box;
+	  resize: none;
+	}
   </style>  
 </head>
 
@@ -117,10 +132,10 @@
 		<hr>
 		
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-lg-4 col-md-6" style="margin-top: 2rem;">
 				<div class="card" style="width: 20rem; height: 14rem;">
 				  <div class="card-body" style="background-image:url(prof1.jpg);">
-				    <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+				    <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
 					<div class="card-header text-white carousel">
 					  <a href="profProfile.html" class="text-white">Prof ko to: Tatak CCS!</a>
 					  <p class="card-text">Sir RJ Molano, the CCS favorite stays on top. Sir RJ Molano, the CCS favorite stays on top. Sir ...</p>
@@ -129,10 +144,10 @@
 				</div>
 			</div>
 			
-			<div class="col-md-4">
+			<div class="col-lg-4 col-md-6" style="margin-top: 2rem;">
 				<div class="card" style="width: 20rem; height: 14rem;">
 				  <div class="card-body" style="background-image:url(prof2.jpg);">
-				    <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+				    <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
 				    <div class="card-header text-white carousel">
 					<a href="#" class="text-white">Top pick from BS IT Students</a>
 					<p class="card-text">Ms. Diane Lim, the true definition of beauty and brains.</p>
@@ -141,10 +156,10 @@
 				</div>
 			</div>
 			
-			<div class="col-md-4">
+			<div class="col-lg-4 col-md-6" style="margin-top: 2rem;">
 				<div class="card" style="width: 20rem; height: 14rem;">
 				  <div class="card-body" style="background-image:url(prof3.jpg);">
-				    <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+				    <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
 					<div class="card-header text-white carousel">
 					  <a href="#" class="text-white">Best of the best</a>
 					  <p class="card-text">Sir Jordan Deja, the beastmode prof. Sir Jordan Deja, the beastmode prof.</p>
@@ -153,21 +168,17 @@
 				</div>
 			</div>
 			
-		</div> <!-- div class row -->
-		<br>
-		<div class="row">
-			
-			<div class="col-md-4">
-				<div class="card text-white" style="width: 20rem; height: 14rem;"">
+			<div class="col-lg-4 col-md-6" style="margin-top: 2rem;">
+				<div class="card text-white" style="width: 20rem; height: 14rem;">
 				  <div class="card-body text-center">
-				    <button type="button" class="btn btn-success bmd-btn-fab" style="width: 4rem; height: 4rem; margin-top: 3rem"> <i class="fa fa-plus fa-1x" aria-hidden="true"></i> </button>
+				    <button type="button" class="btn btn-success bmd-btn-fab" style="width: 4rem; height: 4rem; margin-top: 3rem" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-plus fa-1x" aria-hidden="true"></i> </button>
 					<p class="text-secondary" style="font-size: 1rem;">Add slide</p>
 				  </div>
 				</div>
 			</div>
+			
 		</div> <!-- div class row -->
 		<br>
-		
 		</div> <!-- div class main container -->
 		
 		
@@ -176,6 +187,39 @@
 		
 		
 	</div><!--container end-->
+  
+    <!--Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" style="width: 50rem !important; overflow-y: auto;">
+		<div class="modal-content">
+		  <div class="card-header bg-success text-white">
+			<h5 class="card-title" id="exampleModalLabel" style="margin: auto;">Edit Slide</h5>
+		  </div>
+		  <div class="card-body">
+			<button class="btn btn-primary" onclick="filedialog()" style="width:100%; height: 100px;">
+			<i class="fa fa-plus" aria-hidden="true"></i> Upload Photo
+			<input type="file" id="upload" hidden>
+			</button>
+			<hr>
+			<form>
+			<div class="form-group">
+			  <label for="exampleFormControlInput1">Title</label>
+			  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter title">
+		    </div>
+			<div class="form-group">
+			  <label for="exampleFormControlTextarea1">Caption</label>
+			  <textarea class="form-control pt=3" id="exampleFormControlTextarea1" data-autoresize rows="1" placeholder="Write the caption here" style="line-height: 140%;"></textarea>
+		    </div>
+			</form>
+		  </div>
+		  <div class="card-footer text-right">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Post</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+		
   
   
   <!--FOOTER-->
@@ -229,6 +273,21 @@
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
   <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+  
+  <script>
+    jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+		var offset = this.offsetHeight - this.clientHeight;
+	 
+		var resizeTextarea = function(el) {
+			jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+		};
+		jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
+	});
+	
+	function filedialog() {
+		document.getElementById("upload").click();
+	}
+  </script>
 </body>
 
 </html>
